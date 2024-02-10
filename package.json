@@ -1,0 +1,23 @@
+{
+  "name": "myfirstcrud",
+  "version": "1.0.0",
+  "description": "Creating my first crud",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaithfulBreeze/myFirstCrud.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "crud"
+  ],
+  "author": "FaithfulBreeze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FaithfulBreeze/myFirstCrud/issues"
+  },
+  "homepage": "https://github.com/FaithfulBreeze/myFirstCrud#readme"
+}
