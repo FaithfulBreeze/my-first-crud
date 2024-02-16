@@ -3,3 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    min-height: 100vh;
+    font-size: 5vw;
+    background-image: linear-gradient(to bottom, rgb(95, 0, 0), rgb(40, 0, 0));
+}
+header, header a{
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+}
+header{
+    font-size: 0.5em;
+    text-align: center;
+    border-bottom: 0.2em solid black;
+}
+header h1:hover, footer a:hover{
+    color: rgb(164, 164, 164);
+    transition: 0.1s;
+}
+header img{
+    max-width: 8em;
+    border: 0.12em solid black;
+    border-radius: 3px;
+    filter: invert();
+}
+header img:hover{
+    background-color: rgb(103, 255, 255);
+    transition: 0.15s;
+}
+header h2{
+    margin-bottom: 0.5em;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer, footer a{
+    color: white;
+    background-color: #000;
+    text-align: center;
+    text-decoration: none;
+}
