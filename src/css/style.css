@@ -6,17 +6,17 @@
 body{
     min-height: 100vh;
     font-size: 5vw;
-    background-image: linear-gradient(to bottom, rgb(95, 0, 0), rgb(40, 0, 0));
+    background-image: linear-gradient(to bottom, #5f0000, #280000);
 }
 header, header a{
-    color: white;
+    color: #fff;
     background-color: #333;
     text-decoration: none;
 }
 header{
     font-size: 0.5em;
     text-align: center;
-    border-bottom: 0.2em solid black;
+    border-bottom: 0.2em solid #000;
 }
 header h1:hover, footer a:hover{
     color: rgb(164, 164, 164);
@@ -24,16 +24,37 @@ header h1:hover, footer a:hover{
 }
 header img{
     max-width: 7em;
-    border: 0.12em solid black;
+    border: 0.12em solid #000;
     border-radius: 3px;
     filter: invert();
 }
 header img:hover{
-    background-color: rgb(103, 255, 255);
+    background-color: #67ffff;
     transition: 0.15s;
 }
 header h2{
     margin-bottom: 0.5em;
+}
+main{
+    padding: 1.3em;
+    font-size: 0.7em;
+    color: white;
+    text-align: center;
+}
+main form{
+    margin-bottom: 2em;
+}
+main label{
+    font-size: 0.5em;
+}
+main input{
+    font-size: 0.5em;
+    border-radius: 3px;
+    width: 10em;
+}
+main button{
+    font-size: 0.5em;
+    border-radius: 3px;
 }
 footer{
     position: fixed;
@@ -41,7 +62,7 @@ footer{
     width: 100%;
 }
 footer, footer a{
-    color: white;
+    color: #fff;
     background-color: #000;
     text-align: center;
     text-decoration: none;
