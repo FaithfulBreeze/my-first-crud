@@ -17,6 +17,7 @@ button.addEventListener('click', (event)=>{
         readUsers().then(index=>{
             if(index === -1){
                 alert('ID not found...')
+                return
             }
             user.index = index
             fetch('../../api/delete', {method: 'DELETE', body:JSON.stringify(user)})
