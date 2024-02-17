@@ -1,10 +1,12 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
-const usersJSON = fs.readFileSync('./src/users/users.json')
+const crypto = require("crypto")
 const port = 3030;
 //Creates the Server!
 http.createServer((req, res) => {
+  //Reads the user json
+  const usersJSON = JSON.parse(fs.readFileSync('./src/users/users.json'))
   //Just to get more readable
   const url = req.url
   //Check if is a CRUD operation
@@ -12,18 +14,37 @@ http.createServer((req, res) => {
     const method = req.method
     //Methods for each operation
     const crudRoutes= {
+      //Read route
       GET:()=>{
         res.writeHead(200, {'Content-Type':'application/json'})
-        res.end(usersJSON.toString())
+        res.end(JSON.stringify(usersJSON))
       },
+      //Create route
       POST:()=>{
-
+        req.on('data', (chunk)=>{
+          const user = JSON.parse(chunk)
+          user.id = crypto.randomBytes(12).toString('hex')
+          usersJSON.push(user)
+          fs.writeFileSync('./src/users/users.json', JSON.stringify(usersJSON))
+        })
       },
+      //Update route
       PUT:()=>{
-
+        req.on('data', (chunk)=>{
+          const userUpdate = JSON.parse(chunk)
+          const {index} = userUpdate
+          delete userUpdate.index
+            usersJSON[index] = userUpdate
+            fs.writeFileSync('./src/users/users.json', JSON.stringify(usersJSON))
+        })
       },
+      //Delete route
       DELETE:()=>{
-
+        req.on('data', (chunk)=>{
+          const index = JSON.parse(chunk).index
+          usersJSON.splice(index, 1)
+          fs.writeFileSync('./src/users/users.json', JSON.stringify(usersJSON))
+        })
       }
     }
     //Execs the operation
