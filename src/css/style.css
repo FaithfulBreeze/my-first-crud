@@ -5,7 +5,7 @@
 }
 body{
     min-height: 100vh;
-    font-size: 4.2rem;
+    font-size: 5vw;
     background-image: linear-gradient(to bottom, #5f0000, #280000);
 }
 header, header a{
@@ -23,7 +23,8 @@ header h1:hover, footer a:hover{
     transition: 0.1s;
 }
 header img{
-    max-width: 7em;
+    width: 3em;
+    max-width: 5em;
     border: 0.12em solid #000;
     border-radius: 3px;
     filter: invert();
@@ -45,10 +46,10 @@ main form{
     margin-bottom: 2em;
 }
 main label{
-    font-size: 0.5em;
+    font-size: 0.7em;
 }
 main input{
-    font-size: 0.5em;
+    font-size: 0.7em;
     border-radius: 3px;
     width: 10em;
 }
@@ -60,8 +61,10 @@ ul{
     list-style: none;
     padding: 0.5em;
 }
-li{
+.nowrap{
     white-space: nowrap;
+}
+li{
     padding: 0.2em;
     border: 0.08em solid #888;
     margin-bottom: 0.15em;

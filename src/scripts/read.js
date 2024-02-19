@@ -8,9 +8,13 @@ buttonReadUser.addEventListener('click', (event)=>{
     const index = users.findIndex((usr)=>{
         return usr.id === idInput.value
     })
+    if(index === -1){
+        alert('ID not found...')
+        return
+    }
     for(properties in users[index]){
         const li = document.createElement('li')
-        li.innerHTML = `${properties}: ${users[index][properties]}`
+        li.innerHTML = `<span class="nowrap">${properties}: ${users[index][properties]}</span>`
         res_ul.appendChild(li)
     }
 })
@@ -19,7 +23,7 @@ async function readUsers(){
     users = await data.json()
     for(user of users){
         const li = document.createElement('li')
-        li.innerHTML = `Name: ${user.name}, id: ${user.id}`
+        li.innerHTML = `<span class="nowrap">Name: ${user.name}</span>, <span class="nowrap">id: ${user.id}</span>`
         list_ul.appendChild(li)
     }
 }
