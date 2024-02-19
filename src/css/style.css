@@ -5,7 +5,7 @@
 }
 body{
     min-height: 100vh;
-    font-size: 5vw;
+    font-size: 4.2rem;
     background-image: linear-gradient(to bottom, #5f0000, #280000);
 }
 header, header a{
@@ -58,6 +58,13 @@ main button{
 }
 ul{
     list-style: none;
+    padding: 0.5em;
+}
+li{
+    white-space: nowrap;
+    padding: 0.2em;
+    border: 0.08em solid #888;
+    margin-bottom: 0.15em;
 }
 footer{
     position: fixed;
