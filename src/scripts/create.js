@@ -3,7 +3,7 @@ const button = document.querySelector('button')
 const user = {}
 button.addEventListener('click', (event)=>{
     event.preventDefault()
-    for(input of inputs){ //Checking if there is an empty field
+    for(let input of inputs){ //Checking if there is an empty field
         if(input.value === ''){
             alert('Please fill all the fields')
             return

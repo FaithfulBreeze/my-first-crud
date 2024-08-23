@@ -31,7 +31,8 @@ async function readUsers(userID){
     //If ID is not passed gets all users
     const data = await fetch('../../api/read')
     const users = await data.json()
-    for(user of users){
+    if(users.length == 0) return list_ul.innerHTML = "Empty database."
+    for(let user of users){
         const li = document.createElement('li')
         li.innerHTML = `<span class="nowrap">Name: ${user.name}</span>, <span class="nowrap">id: ${user.id}</span>`
         list_ul.appendChild(li)

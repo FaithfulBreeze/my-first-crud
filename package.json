@@ -2,9 +2,9 @@
   "name": "myfirstcrud",
   "version": "1.0.0",
   "description": "Creating my first crud",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "start": "node index.js"
+    "start": "ts-node index"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/FaithfulBreeze/myFirstCrud/issues"
   },
-  "homepage": "https://github.com/FaithfulBreeze/myFirstCrud#readme"
+  "homepage": "https://github.com/FaithfulBreeze/myFirstCrud#readme",
+  "dependencies": {
+    "@types/node": "^22.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
 }

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     min-height: 100vh;
@@ -45,17 +46,49 @@ main{
 main form{
     margin-bottom: 2em;
 }
+form fieldset.flex{
+    margin: auto;
+    padding: 15px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+form fieldset{
+    padding: 20px;
+}
+form fieldset button, form fieldset input{
+    border-radius: 6px;
+}
+form fieldset.flex div{
+    display: flex;
+    justify-content: space-between;
+}
+.align-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 main label{
     font-size: 0.7em;
 }
 main input{
     font-size: 0.7em;
-    border-radius: 3px;
+    padding: 0px 12px;
     width: 10em;
 }
 main button{
+    text-align: center;
+    padding: 1px 4px;
     font-size: 0.5em;
     border-radius: 3px;
+}
+main button:hover{
+    cursor: pointer;
+    background-color: #888;
+    color: white;
 }
 ul{
     list-style: none;
