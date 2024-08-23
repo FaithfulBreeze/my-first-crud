@@ -151,7 +151,7 @@ export const crud: CrudInterface = {
 
 export const sources: { [key: string]: Function } = {
     home: <SourceFunctionInterface>function(req, res) {
-      res.writeHead(200, { "Content-Type": "text/html" });
+      res.writeHead(200, { "Content-Type": "text/html", "x-frame-options": "allow" });
       res.end(fs.readFileSync("./index.html"))
     },
     html: <SourceFunctionInterface>function(req, res, file) {
