@@ -5,4 +5,4 @@ services:
     ports:
       - 5050:5050
     volumes:
-      - ./src/css/:/app/src/css/
+      - ./src/:/app/src/

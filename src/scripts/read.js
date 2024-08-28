@@ -23,7 +23,7 @@ async function readUsers(userID){
         }
         for(property in user){ //If found
             const li = document.createElement('li')
-            li.innerHTML = `<span class="nowrap">${property}: ${user[property]}</span>`
+            li.innerHTML = `${property}: ${user[property]}</span>`
             user_ul.appendChild(li)
         }
         return
@@ -34,7 +34,7 @@ async function readUsers(userID){
     if(users.length == 0) return list_ul.innerHTML = "Empty database."
     for(let user of users){
         const li = document.createElement('li')
-        li.innerHTML = `<span class="nowrap">Name: ${user.name}</span>, <span class="nowrap">id: ${user.id}</span>`
+        li.innerHTML = `Name: ${user.name}</span>,<br> id: ${user.id}</span>`
         list_ul.appendChild(li)
     }
 }

@@ -94,9 +94,6 @@ ul{
     list-style: none;
     padding: 0.5em;
 }
-.nowrap{
-    white-space: nowrap;
-}
 li{
     padding: 0.2em;
     border: 0.08em solid #888;
@@ -117,6 +114,12 @@ footer, footer a{
 @media screen and (max-width: 740px) {
     body{
         font-size: 3em;
+    }
+    form fieldset{
+        padding: 5px 10px;
+    }
+    li{
+        font-size: 0.5em;
     }
 }
 
