@@ -113,3 +113,21 @@ footer, footer a{
     text-align: center;
     text-decoration: none;
 }
+
+@media screen and (max-width: 740px) {
+    body{
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    body{
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    body{
+        font-size: 1.5em;
+    }
+}

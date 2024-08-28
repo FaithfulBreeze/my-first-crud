@@ -4,3 +4,5 @@ services:
     container_name: my-first-crud
     ports:
       - 5050:5050
+    volumes:
+      - ./src/css/:/app/src/css/
