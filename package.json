@@ -4,7 +4,7 @@
   "description": "Creating my first crud",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node index"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
